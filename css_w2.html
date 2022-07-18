@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Moonrocks&display=swap" rel="stylesheet">
+    <style>
+        .warna{
+            background-color: darkgreen;
+            background-image: url("gambar/elements_of_floral_decoration_background_vector.jpg");
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+
+        .transisi{
+            height:120px;
+            width:120px;
+            border-radius: 10px; 
+            background-color:lightskyblue;
+            box-shadow: 5px 5px 3px black;
+            transition: 1s;
+        }
+
+        .transisi:hover{
+            height: 200px;
+            width: 200px;
+        }
+
+        .transform{
+            height:120px;
+            width:120px;
+            border-radius: 10px; 
+            background-color:lightskyblue;
+            box-shadow: 5px 5px 3px black;
+            transition: 2s;
+            transform:rotate(45deg);
+        }
+
+        .transform:hover{
+            height: 200px;
+            width: 200px;
+        }
+
+        a:link{
+            color: lemonchiffon;
+        }
+
+        a:visited{
+            color: green;
+        }
+
+        a:hover{
+            color: yellow;
+        }
+
+        a:active{
+            color: blue;
+        }
+
+        @media screen and (max-width: 1000px){
+        .transform{
+            background-color: purple;
+        }
+        }
+    </style>
+    <title>Materi CSS</title>
+</head>
+<h1>Week 2 - Materi CSS</h1>
+<body>
+    <h2>jenis css</h2>
+    <ol>
+        <li>inline css</li>
+        <p>h2 style="color: blue; ->menjadi atribut; dimasukkan dalam tag style</p>
+        <li>internal css</li>
+        <p>berada dalam satu halaman html tetapi tidak di dalam tag/tidak menjadi atribut, dimasukkan dalam tag style</p>
+        <li>eksternal css</li>
+        <p>berada di luar halaman html/menjadi halaman css baru yang dihubungkan dengan link style css dengan mengetik tag link, atribut rel=stylesheet, dan href=mengarah pada halaman css</p>
+    </ol>
+    <ul>
+    <li><p>secara terstruktur, sistem akan mendeteksi style mulai dari inline terlebih dahulu, kemudian internal, dan terakhir eskternal</p></li>
+    <li><p>pemanggilan heading 1 - 6 untuk diberi style internal dan eksternal tinggal diketik heading tersebut (misal: h2), maka langsung akan memunculkan format pemberian style nya</p></li>
+    <li><p>sedangkan untuk paragraf (p), dapat menggunakan <b>class</b> atau pun <b>id</b> untuk melakukan pemanggilan</p></li>
+    <li><p> <i>class</i> dihubungkan dengan mengetik titik (.) terlebih dahulu, misal class="nama" maka diketik .nama, sehingga secara otomatis akan memunculkan format pemberian style</p></li>
+    <li><p> sedangkan <i>id</i> dihubungkan dengan mengetik hashtag (#) </p></li>
+    <li><p>class bisa digunakan pada beberapa tag, sedangkan id hanya pada 1 tag</p></li>
+    </ul>
+    <hr>
+    <h2>text</h2>
+    <ul>
+        <li>Text alignment="text-align"</li>
+        <p>digunakan untuk meletakkan posisi teks dan pengaturan rata paragraf (kanan/kiri/justify)</p>
+        <p style="text-align: left;">contoh kiri (left)</p>
+        <p style="text-align: right;">contoh kanan (right)</p>
+        <p style="text-align: center;">contoh tengah (center)</p>
+        <p style="text-align: start;">contoh awal (start)</p>
+        <p style="text-align: end;">contoh akhir (end)</p>
+        <p style="text-align: justify;">contoh rata kanan kiri, justify(kanan): Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt dolor alias obcaecati consectetur praesentium culpa! Quo recusandae voluptates voluptatum dolore cum ad et unde hic libero, animi quam dicta repudiandae.</p>
+        <br>
+        <li>Text decoration="text-decoration"</li>
+        <p>digunakan untuk memperindah teks seperti diberi warna, diberi underline, diberi underline titik, dsb</p>
+        <p style="text-decoration:underline;">contoh underline</p>
+        <p style="text-decoration: dashed;">contoh dashed</p>
+        <p style="text-decoration: dotted;">contoh dotted</p>
+        <p style="text-decoration: double;">contoh double</p>
+        <p style="text-decoration: line-through;">contoh line-through</p>
+        <p style="text-decoration: overline;">contoh overline</p>
+        <p style="text-decoration: solid;">contoh solid</p>
+        <p style="text-decoration: wavy;">contoh wavy</p>
+        <p style="text-decoration: inherit;">contoh inherit</p>
+        <p style="text-decoration: initial">contoh initial</p>
+        <p style="text-decoration: transparent">contoh transparent</p>
+        <p style="text-decoration: unset;">contoh unset</p>
+        <p style="text-decoration: rgb(red, green, blue);">contoh rgb</p>
+        <br>
+        <li>Text Transformation="text-transform"</li>
+        <p>digunakan untuk mengubah huruf menjadi bentuk/perubahan tertentu seperti besar semua, kecil semua, atau besar di awal.</p>
+        <p style="text-transform:capitalize;">contoh capitalize</p>
+        <p style="text-transform:lowercase;">contoh lowrcase</p>
+        <p style="text-transform:uppercase;">contoh uppercase</p>
+        <br>
+        <li>Text Spacing="text-indent/letter-spacing"</li>
+        <p>digunakan untuk mengatur lebar teks. <b>text-indent</b> berguna untuk menentukan lebar spacing kalimat awal paragraf yang menjorok dari kanan atau kiri. adapun <b>letter-spacing</b> berguna untuk menentukan panjang jarak antar huruf</p>
+        <p style="text-indent: 40px;"> contoh text-indent yang menjorok ke kanan 20px, Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis dignissimos qui quam? Iusto veniam laborum sunt fuga doloremque voluptas ex eligendi tempore culpa? Repellendus asperiores magnam sapiente omnis, labore ducimus.</p>
+        <p style="letter-spacing: 3px;">contoh letter-spacing yang berjarak 3px. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt nihil rerum cum sapiente repellat corrupti reiciendis voluptas saepe pariatur repudiandae, impedit, delectus id tempora quia et blanditiis, praesentium commodi corporis.</p>
+    </ul>
+    <hr>
+    <h2>Font</h2>
+    <ul>
+        <li>jenis font:"font-family"</li>
+        <p>bisa disesuaikan di mc word</p>
+        <p>jenis font juga bisa diambil dari pencarian di google atau dafont.</p>
+        <p>link dicopykan di atas title html: klik font > klik select this style > copy link > letakkan di atas title > lalu link css-nya dimasukkan ke css yang dituju</p>
+        <li>ukuran font:"font-size"</li>
+        <p>menggunakan pixel</p>
+        <li>ketebalan font dan border:"font-weight"</li>
+        <li>color</li>
+        <p style="font-family: 'Rubik Moonrocks', cursive; font-size: 30px; font-weight: lighter; color: chartreuse;">Contoh font family rubik moonrocks</p>
+    </ul>
+    <h2>Background</h2>
+    <ul>
+        <li>Background warna: "background-color"</li>
+        <li>Background gambar: "background-image: url("folder/gambar.png")</li>
+        <li>Background berulah: "background-repeat"</li>
+        <li>Background ukuran: "background-size"</li>
+    </ul>
+    <p class="warna">contoh background color Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt saepe, aperiam asperiores exercitationem necessitatibus animi nam sunt eum expedita aliquid doloremque facere deserunt quo vitae aspernatur corrupti, nemo non odit. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maxime aliquam est ratione. Id error cumque natus nemo quidem necessitatibus, soluta sunt dolore nulla! Nesciunt sed commodi culpa, aperiam repellat rem!. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem minus fugiat cumque, distinctio nisi deleniti a, tempora corporis vero saepe possimus officiis sequi et aliquid numquam commodi iusto deserunt. Doloremque?</p>
+    <hr>
+    
+    <h2>Pseudo Class</h2>
+    <ul>
+        <li>Link:"a:link"</li>
+        <p>digunakan untuk menunjukkan bahwa elemen atau teks yang ditandai sebagai link tersebut akan mengarahkan pada bagian atau halaman tertentu</p>
+        <li>visited:"a:visited"</li>
+        <p>sebagai lanjutan dari <b>link</b>, setelah diklik dan mengarah ke halaman atau bagian lain, maka teks atau elemen tersebut akan berubah warna atau terjadi perubahan yang berbeda dari sebelum di klik</p>
+        <li>hover:"a:hover"</li>
+        <p>digunakan sebagai pertanda ketika kursor diarahkan ke elemen/teks/simbol yang dilabeli hover</p>
+        <li>active:"a:active"</li>
+        <p>berguna ketika kursor diarahkan ke bagian yang dilabeli active, lalu diklik dengan ditahan, kemudian di geser ke arah tertentu, maka akan terjadi perubahan tertentu</p>
+    </ul>
+    <a href="biografi_humam.html" class="link"><b>contoh link</b></a>
+    <hr>
+    <h2>Layouting</h2>
+    <ul>
+        <li>Tata Layout:div</li>
+        <p>digunakan untuk mengatur tata layout suatu teks atau bagian</p>
+        <li>Sisipan:span</li>
+        <p>digunakan untuk menyisipkan warna atau perubahan bentuk tertentu pada kata dalam kalimat tertentu</p>
+    </ul>
+    <div style="height:60px; width: 200px; background-color: darkgreen;">Contoh tata layout</div>
+    <div style="height:180px; width: 200px; background-color: lime;">Lorem ipsum <span style="color:blue;">contoh span</span> dolor sit amet consectetur adipisicing elit. Quas omnis adipisci vero aspernatur. Deserunt earum nam laboriosam provident repudiandae maiores, mollitia a corrupti non beatae animi, quasi error recusandae atque.</div>
+    <hr>
+    <h2>Display</h2>
+    <ul>
+        <li>inline: tidak bisa diatur stylenya</li>
+        <li>block: bisa diatur normal mencakup semua</li>
+        <li>inline-block: gabungan block dan inline</li>
+        <li>none: menghilangkan bagian yang didisplay</li>
+        <li>hidden: hampir sama dengan none, tetapi ada pengaturan khusus</li>
+    </ul>
+    <p>khusus untuk "p" default display nya inline</p>
+    <div style="display: block; height:120px; width:150px; background-color:purple;">contoh block</div>
+    <div style="display: inline; height:120px; width:150px; background-color:violet;">contoh inline</div>
+    <div style="display:inline-block; height:120px; width:150px; background-color:blue;">contoh inline-block</div>
+    <div style="display: none; height:120px; width:150px; background-color:purple;">contoh none</div>
+    <div style="display: hidden; height:120px; width:150px; background-color:purple;">contoh hidden</div>
+    <hr>
+    <h2>Dimensi dan Box Model</h2>
+    <ul>
+        <li>ketebalan:"width"</li>
+        <li>ketinggian:"height"</li>
+        <li>jarak kotakan dengan daerah lain:"margin"</li>
+        <li>jarak teks/isi dalam kotakan dengan blok kotakannya: "padding"</li>
+        <li>bingkai:"border"</li>
+    </ul>
+    <div style="width: 100px; height: 150px; background-color:aqua; margin-bottom:10px; padding: 5px; border: 5px solid red;">contoh div dengan margin bottom 10px, padding 5px, dan border 5px red solid</div>
+    <div style="display: block; height:120px; width:150px; background-color:purple;">contoh lain</div>
+    <hr>
+    <h2>Positioning</h2>
+    <ul>
+        <li>static</li>
+        <p>Posisi tetap/tidak berubah meski diberikan impuls geseran atau lainnya</p>
+        <li>relative</li>
+        <p>Posisi berubah sesuai impuls</p>
+        <li>fixed</li>
+        <p>Posisi elemen akan tetap bahkan jika layar discroll/digeser atas bawah</p>
+        <li>absolute</li>
+        <p>seperti relative, tapi keluar dari bagian yang dilabeli absolute</p>
+        <li>sticky</li>
+        <p>seperti fixed, akan tetapi harus diberikan impuls supaya tetap diposisinya, bergeser jika di scroll</p>
+        <li>z-index</li>
+        <p>menjadi penentu lapisan atas, bawah, tengah, dan urutasn lapisan lainnya</p>
+    </ul>
+    <div style="position: static; height:120px; width:150px; background-color:purple;">contoh static</div>
+    <div style="height:120px; width:150px; background-color:yellow;">contoh lain</div>
+    <div style="height:120px; width:150px; background-color:red;">contoh lain</div>
+    <br>
+    <div style="position: relative; height:120px; width:150px; background-color:purple;">contoh relative</div>
+    <div style="height:120px; width:150px; background-color:yellow;">contoh lain</div>
+    <div style="height:120px; width:150px; background-color:red;">contoh lain</div>
+    <br>
+    <div style="position: absolute; right: 0; height:120px; width:150px; background-color:purple;">contoh absolute</div>
+    <div style="height:120px; width:150px; background-color:yellow;">contoh lain</div>
+    <div style="height:120px; width:150px; background-color:red;">contoh lain</div>
+    <br>
+    <div style="position: fixed; top: 0; height:120px; width:150px; background-color:green;">contoh fixed</div>
+    <div style="height:120px; width:150px; background-color:yellow;">contoh lain fixed</div>
+    <div style="height:120px; width:150px; background-color:red;">contoh lain</div>
+    <br>
+    <div style="position: sticky; top: 0; height:120px; width:150px; background-color:green;">contoh sticky</div>
+    <div style="height:120px; width:150px; background-color:yellow;">contoh lain</div>
+    <div style="height:120px; width:150px; background-color:red;">contoh lain</div>
+    <br>
+    <div style="position: absolute; z-index:-1; height:120px; width:150px; background-color:purple;">contoh z-index</div>
+    <div style="position: absolute; z-index:0; height:120px; width:150px; background-color:yellow;">contoh lain, dibawah warna ini ada purple dan red</div>
+    <div style="position: relative; z-index:-2; height:120px; width:150px; background-color:red;">contoh lain</div>
+    <br>
+    <hr>
+    <h2>CSS 3</h2>
+    <ul>
+        <li>border radius</li>
+        <p>membuat pojok - pojok kotakan menjadi melengkung</p>
+        <li>opacity</li>
+        <p>mengatur kecerahan warna</p>
+        <li>box shadow</li>
+        <p>memberikan bayangan kotak</p>
+        <li>text shadow</li>
+        <p>memberikan bayangan teks</p>
+        <li>transition</li>
+        <p>timing elemen yang berubah menjadi bentuk tertentu, misal karena di hover</p>
+        <li>transform</li>
+        <p>elemen yang berubah posisi baik berotasi maupun pencerminan (kayak transformasi)</p>
+        <li>media screen</li>
+        <p>mengubah tampilan sesuai ukuran layar</p>
+    </ul>
+    <div style="height:120px; width:120px; border-radius: 10px; background-color:purple;">contoh border radius</div><br>
+    <div style="height:120px; width:120px; border-radius: 10px; opacity: 30%; background-color:purple;">contoh opacity</div><br>
+    <div style="height:150px; width:120px; border-radius: 10px; box-shadow: 5px 5px 5px green; background-color:purple;">contoh box shadow dengan bergeser ke simetri x sebesar 5px, simeteri y sebesar 5px, dan blur 5px dengan warna hijau</div><br>
+    <div class="transisi">contoh transisi, arahkan kursor di sini</div><br>
+    <div class="transform">contoh transform, arahkan kursor di sini</div><br>
+    <div class="transform">contoh media query, cobalah untuk memperkecil layar</div>
+</body>
+</html>
