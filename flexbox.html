@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 2 - Flexbox</title>
+    <style>
+        .container{
+            margin: auto 50px;
+            border: 4px solid gray;
+            display: flex;
+        }
+        .container div {
+            width: 120px;
+            background-color: blue;
+            height: 120px;
+        }
+        .containera{
+            margin:auto 50px;
+            border: 4px solid gray;
+        }
+        .containera div{
+            width: 120px;
+            background-color: blue;
+            height: 120px;
+            float: left;
+        }
+        .containerb{
+            margin:auto 50px;
+            border: 4px solid gray;
+            display: flex;
+            flex-direction: row;
+        }
+        .containerb div{
+            width: 120px;
+            background-color: blue;
+            height: 120px;
+        }
+        .containerc{
+            margin:auto 50px;
+            border: 4px solid gray;
+            display: flex;
+            flex-direction: row-reverse;
+        }
+        .containerc div{
+            width: 120px;
+            background-color: blue;
+            height: 120px;
+        }
+        .containerd{
+            margin:auto 50px;
+            border: 4px solid gray;
+            display: flex;
+            flex-direction:column;
+        }
+        .containerd div{
+            width: 120px;
+            background-color: blue;
+            height: 120px;
+        }
+        .containere{
+            margin:auto 50px;
+            border: 4px solid gray;
+            display: flex;
+            flex-direction:column-reverse;
+        }
+        .containere div{
+            width: 120px;
+            background-color: blue;
+            height: 120px;
+        }
+        .wrap{
+            margin:auto 50px;
+            border: 4px solid gray;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .wrap div{
+            width: 120px;
+            background-color: blue;
+            height: 120px;
+        }
+        .wrap1{
+            margin:auto 50px;
+            border: 4px solid gray;
+            display: flex;
+            flex-wrap: wrap-reverse;
+        }
+        .wrap1 div{
+            width: 120px;
+            background-color: blue;
+            height: 120px;
+        }
+        .justify{
+            margin:auto 50px;
+            border: 4px solid gray;
+            display: flex;
+            justify-content: flex-start;
+        }
+        .justify div{
+            width: 120px;
+            background-color: blue;
+            height: 120px;
+        }
+        .justify1{
+            margin:auto 50px;
+            border: 4px solid gray;
+            display: flex;
+            justify-content: flex-end;
+        }
+        .justify1 div{
+            width: 120px;
+            background-color: blue;
+            height: 120px;
+        }
+        .justify2{
+            margin:auto 50px;
+            border: 4px solid gray;
+            display: flex;
+            justify-content: center;
+        }
+        .justify2 div{
+            width: 120px;
+            background-color: blue;
+            height: 120px;
+            margin: 2px;
+            text-align: center;
+        }
+        .justify3{
+            margin:auto 50px;
+            border: 4px solid gray;
+            display: flex;
+            justify-content:space-between;
+        }
+        .justify3 div{
+            width: 120px;
+            background-color: blue;
+            height: 120px;
+        }
+        .justify4{
+            margin:auto 50px;
+            border: 4px solid gray;
+            display: flex;
+            justify-content:space-around;
+        }
+        .justify4 div{
+            width: 120px;
+            background-color: blue;
+            height: 120px;
+        }
+        .justify5{
+            margin:auto 50px;
+            border: 4px solid gray;
+            display: flex;
+            justify-content:space-evenly;
+        }
+        .justify5 div{
+            width: 120px;
+            background-color: blue;
+            height: 120px;
+        }
+        .align1{
+            margin:auto 50px;
+            border: 4px solid gray;
+            display: flex;
+            min-height: 300px;
+            align-items: flex-start;
+        }
+        .align1 div{
+            width: 120px;
+            background-color: blue;
+            height: 120px;
+        }
+        .align2{
+            margin:auto 50px;
+            border: 4px solid gray;
+            display: flex;
+            min-height: 300px;
+            align-items: flex-end;
+        }
+        .align2 div{
+            width: 120px;
+            background-color: blue;
+            height: 120px;
+        }
+        .align3{
+            margin:auto 50px;
+            border: 4px solid gray;
+            display: flex;
+            min-height: 300px;
+            align-items: center;
+        }
+        .align3 div{
+            width: 120px;
+            background-color: blue;
+            height: 120px;
+        }
+        .align4{
+            margin:auto 50px;
+            border: 4px solid gray;
+            display: flex;
+            min-height: 300px;
+            align-items: stretch;
+        }
+        .align4 div{
+            width: 120px;
+            background-color: blue;
+            margin: 2px;
+        }
+        .align5{
+            margin:auto 50px;
+            border: 4px solid gray;
+            display: flex;
+            min-height: 300px;
+            align-items: baseline;
+        }
+        .align5 div{
+            width: 120px;
+            background-color: blue;
+            height: 120px;
+            margin: 2px;
+        }
+        .align5 div.dua{
+            font-size: 20px;
+        }
+        .align5 div.tiga{
+            font-size: 50px;
+        }
+        .order{
+            margin:auto 50px;
+            border: 4px solid gray;
+            display: flex;
+            min-height: 300px;
+            align-items: baseline;
+        }
+        .order div{
+            width: 120px;
+            background-color: blue;
+            height: 120px;
+            margin: 2px;
+            color: white;
+        }
+        .order div.satu{
+            font-size: 20px;
+            order: 1;
+        }
+        .order div.dua{
+            font-size: 20px;
+            order: 2;
+        }
+        .order div.tiga{
+            font-size: 20px;
+        }
+        .order1{
+            margin:auto 50px;
+            border: 4px solid gray;
+            display: flex;
+            min-height: 300px;
+            align-items: baseline;
+        }
+        .order1 div{
+            width: 120px;
+            background-color: blue;
+            height: 120px;
+            margin: 2px;
+            color: white;
+        }
+        .order1 div.satu{
+            font-size: 20px;
+            flex-grow: 3;
+        }
+        .order1 div.dua{
+            font-size: 20px;
+            flex-grow: 8;
+        }
+        .order1 div.tiga{
+            font-size: 20px;
+            flex-grow: 3;
+        }
+    </style>
+</head>
+<body>
+    <h1>Materi Flexbox</h1>
+    mengatur layout halaman secara rapi di berbagai ukuran layar dengan mudah
+    <h2>kontainer</h2>
+    merupakan elemen pembungkus dari tiap item
+    contoh:
+    <div class="container">
+        <div class="satu">1.</div>
+        <div class="dua">2.</div>
+        <div class="tiga">3.</div>
+    </div>
+    <p>sebenarnya bisa menggunakan float, akan tetapi kurang fleksibel</p>
+    contoh:
+    <div class="containera">
+        <div class="satu">1.</div>
+        <div class="dua">2.</div>
+        <div class="tiga">3.</div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <ul>
+        <li>display: flex</li>
+        <p>digunakan untuk membuat layout seperti di atas (yang pertama)</p>
+        <li>flex-direction</li>
+        <p>default-nya row, tapi bisa diatur seperti:</p>
+        <ol>
+        <li>row</li>
+        <div class="containerb">
+            <div class="satu">1.</div>
+            <div class="dua">2.</div>
+            <div class="tiga">3.</div>
+        </div>
+        <li>row-reverse</li>
+        <div class="containerc">
+            <div class="satu">1.</div>
+            <div class="dua">2.</div>
+            <div class="tiga">3.</div>
+        </div>
+        <li>column</li>
+        <div class="containerd">
+            <div class="satu">1.</div>
+            <div class="dua">2.</div>
+            <div class="tiga">3.</div>
+        </div>
+        <li>column-reverse</li>
+        <div class="containere">
+            <div class="satu">1.</div>
+            <div class="dua">2.</div>
+            <div class="tiga">3.</div>
+        </div>
+        </ol>
+        <li>flex-wrap</li>
+        <ol>
+            <li>wrap</li>
+            <div class="wrap">
+                <div class="satu">1.</div>
+                <div class="dua">2.</div>
+                <div class="tiga">3.</div>
+                <div class="satu">1.</div>
+                <div class="dua">2.</div>
+                <div class="tiga">3.</div>
+                <div class="satu">1.</div>
+                <div class="dua">2.</div>
+                <div class="tiga">3.</div>
+                <div class="satu">1.</div>
+                <div class="dua">2.</div>
+                <div class="tiga">3.</div>
+                <div class="satu">1.</div>
+                <div class="dua">2.</div>
+                <div class="tiga">3.</div>
+            </div>
+            <li>wrap-reverse</li>
+            <div class="wrap1">
+                <div class="satu">1.</div>
+                <div class="dua">2.</div>
+                <div class="tiga">3.</div>
+                <div class="satu">1.</div>
+                <div class="dua">2.</div>
+                <div class="tiga">3.</div>
+                <div class="satu">1.</div>
+                <div class="dua">2.</div>
+                <div class="tiga">3.</div>
+                <div class="satu">1.</div>
+                <div class="dua">2.</div>
+                <div class="tiga">3.</div>
+                <div class="satu">1.</div>
+                <div class="dua">2.</div>
+                <div class="tiga">3.</div>
+            </div>
+        </ol>
+        <li>justify-content</li>
+        <ol>
+            <li>flex-start</li>
+            <div class="justify">
+                <div class="satu">1.</div>
+                <div class="dua">2.</div>
+                <div class="tiga">3.</div>
+            </div>
+            <li>flex-end</li>
+            <div class="justify1">
+                <div class="satu">1.</div>
+                <div class="dua">2.</div>
+                <div class="tiga">3.</div>
+            </div>
+            <li>center</li>
+            <div class="justify2">
+                <div class="satu">1.</div>
+                <div class="dua">2.</div>
+                <div class="tiga">3.</div>
+            </div>
+            <li>space-between</li>
+            <div class="justify3">
+                <div class="satu">1.</div>
+                <div class="dua">2.</div>
+                <div class="tiga">3.</div>
+            </div>
+            <li>space-around</li>
+            <div class="justify4">
+                <div class="satu">1.</div>
+                <div class="dua">2.</div>
+                <div class="tiga">3.</div>
+            </div>
+            <li>space-evenly</li>
+            <div class="justify5">
+                <div class="satu">1.</div>
+                <div class="dua">2.</div>
+                <div class="tiga">3.</div>
+            </div>
+        </ol>        
+        <li>align-item</li>
+        <p>noted: harus didefiniskan terlebih dahulu heightnya</p>
+        <ol>
+            <li>flex-start</li>
+            <div class="align1">
+                <div class="satu">1.</div>
+                <div class="dua">2.</div>
+                <div class="tiga">3.</div>
+            </div>
+            <li>flex-end</li>
+            <div class="align2">
+                <div class="satu">1.</div>
+                <div class="dua">2.</div>
+                <div class="tiga">3.</div>
+            </div>
+            <li>center</li>
+            <div class="align3">
+                <div class="satu">1.</div>
+                <div class="dua">2.</div>
+                <div class="tiga">3.</div>
+            </div>
+            <li>stretch</li>
+            <p>noted: height di inner div nya dihilangkan</p>
+            <div class="align4">
+                <div class="satu">1.</div>
+                <div class="dua">2.</div>
+                <div class="tiga">3.</div>
+            </div>
+            <li>baseline</li>
+            <p>noted: dispesifikan pada bagian inner div nya</p>
+            <div class="align5">
+                <div class="satu">1.</div>
+                <div class="dua">2.</div>
+                <div class="tiga">3.</div>
+            </div>
+        </ol>
+        <li>align-content</li>
+        <p>seperti align-item hany saja berlaku pada lebih dari satu baris: isinya seperti flex-start, flex-end, center, stretch, space-around, dan space-between</p>
+        <li>order</li>
+        <p>untuk mengatur urutan item, secara default, jika tanpa diberi label order maka dianggap oder: 0, atau yang pertama</p>
+        <div class="order">
+            <div class="satu">1.</div>
+            <div class="dua">2.</div>
+            <div class="tiga">3.</div>
+        </div>
+        <li>flex-grow</li>
+        <p>untuk mengatur perbandingan jarak layout item dengan item lainnya</p>
+        <div class="order1">
+            <div class="satu">1.</div>
+            <div class="dua">2.</div>
+            <div class="tiga">3.</div>
+        </div>
+    </ul>
+</body>
+</html>
